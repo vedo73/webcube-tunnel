@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="webcube:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="webcube-0.0.0.war">
+      <element id="artifact" artifact-name="webcube:war exploded" />
+    </root>
+  </artifact>
+</component>

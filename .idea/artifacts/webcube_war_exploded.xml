@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="webcube:war exploded">
+    <output-path>$PROJECT_DIR$/target/webcube-0.0.0</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="webcube/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="webcube" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.glyptodon.guacamole:guacamole-common:0.9.3" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
