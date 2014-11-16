@@ -24,16 +24,17 @@ public class WebcubeTunnelServlet
         // Create our configuration
         GuacamoleConfiguration config = new GuacamoleConfiguration();
         config.setProtocol("vnc");
-        config.setParameter("hostname", "localhost");
+        config.setParameter("hostname", "10.8.67.247");
         config.setParameter("port", "5901");
-        config.setParameter("password", "potato");
+        config.setParameter("password", "test");
 
         // Connect to guacd - everything is hard-coded here.
+        System.out.println("herewego");
         GuacamoleSocket socket = new ConfiguredGuacamoleSocket(
-                new InetGuacamoleSocket("localhost", 4822),
+                new InetGuacamoleSocket("10.8.67.247", 4822),
                 config
         );
-
+        System.out.println("niggawemadeit");
         // Establish the tunnel using the connected socket
         GuacamoleTunnel tunnel = new GuacamoleTunnel(socket);
 

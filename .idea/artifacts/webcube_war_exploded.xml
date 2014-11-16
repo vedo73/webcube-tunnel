@@ -13,6 +13,8 @@
       </element>
       <element id="javaee-facet-resources" facet="webcube/web/Web" />
       <element id="file-copy" path="$PROJECT_DIR$/web/index.html" />
+      <element id="file-copy" path="$PROJECT_DIR$/web/all.js" />
+      <element id="file-copy" path="$PROJECT_DIR$/web/all.min.js" />
     </root>
   </artifact>
 </component>
