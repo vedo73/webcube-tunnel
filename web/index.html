@@ -1,10 +1,49 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+
+<head>
+    <title>Guacamole Tutorial</title>
 </head>
+
 <body>
-Test SOMETHING
+
+<!-- Guacamole -->
+<script type="text/javascript"
+        src="guacamole-common-js/all.min.js"></script>
+
+<!-- Display -->
+<div id="display"></div>
+
+<!-- Init -->
+<script type="text/javascript"> /* <![CDATA[ */
+
+// Get display div from document
+var display = document.getElementById("display");
+
+// Instantiate client, using an HTTP tunnel for communications.
+var guac = new Guacamole.Client(
+        new Guacamole.HTTPTunnel("tunnel")
+);
+
+// Add client to display div
+display.appendChild(guac.getDisplay().getElement());
+
+// Error handler
+guac.onerror = function(error) {
+    alert(error);
+};
+
+// Connect
+guac.connect();
+
+// Disconnect on close
+window.onunload = function() {
+    guac.disconnect();
+}
+
+/* ]]> */ </script>
+
 </body>
+
 </html>
