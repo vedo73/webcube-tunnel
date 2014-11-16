@@ -20,11 +20,11 @@ public class WebcubeTunnelServlet
     protected GuacamoleTunnel doConnect(HttpServletRequest request)
             throws GuacamoleException {
 
-        System.out.println("wtf");
+        System.out.println(request.getPathInfo().substring(1));
         // Create our configuration
         GuacamoleConfiguration config = new GuacamoleConfiguration();
         config.setProtocol("vnc");
-        config.setParameter("hostname", "10.8.67.247");
+        config.setParameter("hostname", request.getPathInfo().substring(1));
         config.setParameter("port", "5901");
         config.setParameter("password", "test");
 

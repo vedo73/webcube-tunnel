@@ -18,12 +18,19 @@
 <!-- Init -->
 <script type="text/javascript"> /* <![CDATA[ */
 
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 // Get display div from document
 var display = document.getElementById("display");
 
 // Instantiate client, using an HTTP tunnel for communications.
 var guac = new Guacamole.Client(
-        new Guacamole.HTTPTunnel("tunnel")
+        new Guacamole.HTTPTunnel("tunnel/" + getParameterByName("ip"))
 );
 
 // Add client to display div

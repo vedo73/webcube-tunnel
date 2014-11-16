@@ -16,7 +16,7 @@
 
     <servlet-mapping>
         <servlet-name>tunnel</servlet-name>j
-        <url-pattern>/tunnel</url-pattern>
+        <url-pattern>/tunnel/*</url-pattern>
     </servlet-mapping>
 
     <!-- Basic config -->
